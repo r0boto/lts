@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="jquery.mobile-1.0rc1.css" />
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.0rc1.min.js"></script>
+
+  <script>
+   var text = "Muchas gracias.";
+        var language = "es";
+        var format = "audio/wav";
+  
+$(document).ready(function () {
+$.get("http://api.microsofttranslator.com/V2/Http.svc/Speak?appId=98BAFD350ACBE1FE601ABF6274820CC03BAAC1D4&text=Hello&language=en&format=audio/wav", 
+ 	function(data){
+	alert("Data Loaded: " + data);
+	});
+});
+  </script>
+
+	
+
+</head> 
+
+<body> 
+<audio controls="controls">
+<source src="http://api.microsofttranslator.com/V2/Http.svc/Speak?appId=98BAFD350ACBE1FE601ABF6274820CC03BAAC1D4&text=What%20is%20You%20name?&language=en&format=audio/wav" />
+Your browser does not support this audio
+</audio>
+
+
+</body>
+</html>
