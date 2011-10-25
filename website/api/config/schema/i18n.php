@@ -1,5 +1,6 @@
 <?php
 /*i18n schema generated on: 2007-11-25 07:11:25 : 1196004805*/
+
 /**
  * This is i18n Schema file
  *
@@ -20,6 +21,7 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
 /*
  *
  * Using the Schema command line utility

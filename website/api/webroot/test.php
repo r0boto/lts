@@ -11,9 +11,9 @@
  *  Redistributions of files must retain the above copyright notice.
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://book.cakephp.org/view/1196/Testing
+ * @link          http://book.cakephp.org/view/1196/Testing CakePHP(tm) Tests
  * @package       cake
- * @subpackage    cake.app.webroot
+ * @subpackage    cake.cake.tests.libs
  * @since         CakePHP(tm) v 1.2.0.4433
  * @license       http://www.opensource.org/licenses/opengroup.php The Open Group Test Suite License
  */
@@ -50,7 +50,7 @@ ini_set('display_errors', 1);
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH', ROOT);
+		define('CAKE_CORE_INCLUDE_PATH',  DS . 'Volumes' . DS . 'external' . DS . 'Data' . DS . 'Programing' . DS . 'PHP' . DS . 'www' . DS . 'cakephp_muster');
 	}
 
 /**

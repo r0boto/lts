@@ -1,5 +1,6 @@
 <?php
 /*DbAcl schema generated on: 2007-11-24 15:11:13 : 1195945453*/
+
 /**
  * This is Acl Schema file
  *
@@ -20,6 +21,7 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
 /*
  *
  * Using the Schema command line utility

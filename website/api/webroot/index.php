@@ -50,7 +50,7 @@
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH', ROOT);
+		define('CAKE_CORE_INCLUDE_PATH',  DS . 'Volumes' . DS . 'external' . DS . 'Data' . DS . 'Programing' . DS . 'PHP' . DS . 'www' . DS . 'cakephp_muster');
 	}
 
 /**
