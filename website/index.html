@@ -1,36 +1,112 @@
 <!DOCTYPE html> 
-<html> 
-	<head> 
-	<title>Page Title</title> 
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script src="appCode.js" type="text/javascript"></script>
+<script type="text/javascript">
 
-	<link rel="stylesheet" href="jquery.mobile-1.0rc1.css" />
-	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="jquery.mobile-1.0rc1.min.js"></script>
-
-  <script>
-   var text = "Muchas gracias.";
-        var language = "es";
-        var format = "audio/wav";
-  
-$(document).ready(function () {
-$.get("http://api.microsofttranslator.com/V2/Http.svc/Speak?appId=98BAFD350ACBE1FE601ABF6274820CC03BAAC1D4&text=Hello&language=en&format=audio/wav", 
- 	function(data){
-	alert("Data Loaded: " + data);
-	});
+//TRANSLATE APP
+$('body').live('pagebeforeshow', function(event, ui){
+  translateApp();
 });
-  </script>
 
+
+
+
+//EVENTS HANDLING
+ $(document).ready(function () {
+	  
+
+
+//LOGIN 	  
+ $("#loginBtn").click(function() {
+ if ($("#useremail").length() <=5 || $("#userpassword").length() <=5)
+ {
+ alert('nezadal jste e-mail');
+ return false;
+ }
+ 
+ else
+ {
+ var  email  = $("#useremails")	.val();
+ var  password  =  $("#userpassword").val();
 	
+aler(email);	
+	/* 
+$.get('api/users/login?email=jirivavru@gmail.com&password=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', function(data) {
+  $('.result').html(data);
+  alert('Load was performed.');
+});
+	 */
+ }
+ 
+});
+//END LOGIN
 
+
+});
+
+
+
+
+</script>
 </head> 
-
 <body> 
-<audio controls="controls">
-<source src="http://api.microsofttranslator.com/V2/Http.svc/Speak?appId=98BAFD350ACBE1FE601ABF6274820CC03BAAC1D4&text=What%20is%20You%20name?&language=en&format=audio/wav" />
-Your browser does not support this audio
-</audio>
+
+<div data-role="page" id="homePage">
+	<div data-role="header">
+		<h1>Welcome in live teacher</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#loginPage">Login</a></li>
+            <li><a href="#page3">Page Three</a></li>
+			<li><a href="#page4">Page Four</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="loginPage">
+	<div data-role="header">
+		<h1 id="loginHeader"></h1>
+	</div>
+	<div data-role="content">	
+		
+	  <div data-role="fieldcontain">
+	    <label for="textinput">E-mail:</label>
+	    <input type="text" name="textinput" id="useremail" value=""  />
+	   
+	    <div data-role="fieldcontain">
+	      <label for="passwordinput">Password:</label>
+	      <input type="password" name="passwordinput" id="userpassword" value=""  />
+        </div>
+        
+        
+            <div data-role="fieldcontain">
+	             <button data-icon="check" id="loginBtn">Login</button>
+        </div>
+    <div data-role="fieldcontain">
+	             <button data-icon="info">I forgot password</button>
+        </div>
+ 
+      </div>
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+
+
 
 
 </body>
